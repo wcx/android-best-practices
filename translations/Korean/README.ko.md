@@ -138,8 +138,8 @@ signingConfigs {
 
 ```groovy
 dependencies {
-    compile 'com.squareup.okhttp:okhttp:2.2.0'
-    compile 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
+    implementation 'com.squareup.okhttp:okhttp:2.2.0'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
 }
 ```
 
@@ -511,7 +511,6 @@ ProGuard가 클래스 혹은 클래스 멤버들의 *난독화*을 막고싶다�
 -keepnames class com.futurice.project.MyClass { *; }
 ```
 
-예시로 [this template's ProGuard config](https://github.com/futurice/android-best-practices/blob/master/templates/rx-architecture/app/proguard-rules.pro)를 확인하자.
 또 다른 예시로 [Proguard](http://proguard.sourceforge.net/#manual/examples.html)를 읽어보자.
 
 **프로젝트의 초기에, 릴리즈 빌드를 만들자.** 이는 ProGuard 규칙들이 중요한 것들을 정확하게 보관하고 있는지 확인하기 위함이다. 또한 언제든지 새로운 라이브러리를 포함시켰을 때, 릴리즈 빌드를 만들고 기기에서 apk를 테스트해보자. 릴리즈 빌드를 만들기 위해 앱이 "1.0" 버전이 되기까지 기다리지 말고, 수 차례 의외의 문제들을 발견하고 수정하는 짧은 시간을 갖자.
